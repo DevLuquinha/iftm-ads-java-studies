@@ -12,13 +12,21 @@ public class Main {
 
         // 1. Add balance for bank accounts
         nubank.deposit(100);
-        nubank.withdraw(30);
+        if (!nubank.canWithdraw(100)){
+            System.out.println("Warning! You can't withdraw because your balance is smallest. YOU'RE A POOR!!!");
+        } else {
+            nubank.withdraw(30);
+        }
 
         inter.deposit(300);
-        inter.withdraw(20);
+        if (!inter.canWithdraw(20)){
+            System.out.println("Warning! You can't withdraw because your balance is smallest. YOU'RE A POOR!!!");
+        } else {
+            inter.withdraw(20);
+        }
 
         // 2. Get the bank statements
-        System.out.printf("BANK STATEMENTS");
+        System.out.print("\nBANK STATEMENTS");
         nubank.showStatement();
         inter.showStatement();
     }

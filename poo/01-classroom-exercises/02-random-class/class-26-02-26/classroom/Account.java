@@ -10,7 +10,18 @@ public class Account {
     }
 
     void withdraw(double value){
-        this.balance -= value;
+        // Secure withdraw
+        if (canWithdraw(value)){
+            this.balance -= value;
+        }
+    }
+
+    boolean canWithdraw(double value){
+        if (value > this.balance){
+            return false;
+        } else {
+            return true;
+        }
     }
 
     void showStatement(){
