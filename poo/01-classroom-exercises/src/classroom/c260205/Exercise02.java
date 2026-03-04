@@ -1,4 +1,4 @@
-package classroom;
+package classroom.c260205;
 /*
 02 - Imprima a soma de 1 até 1000.
 */
