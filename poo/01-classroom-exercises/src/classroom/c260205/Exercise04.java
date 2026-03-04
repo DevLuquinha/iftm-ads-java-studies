@@ -1,4 +1,4 @@
-package classroom;
+package classroom.c260205;
 /*04 - Imprima os fatoriais de 1 a 10.*/
 
 public class Exercise04 {

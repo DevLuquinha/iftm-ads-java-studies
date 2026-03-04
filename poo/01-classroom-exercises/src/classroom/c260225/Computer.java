@@ -1,4 +1,4 @@
-package classroom;
+package classroom.c260225;
 
 public class Computer {
     int memory;
