@@ -4,12 +4,4 @@ public class Person {
     String name;
     int age;
     double salary;
-
-    void showPersonInfo(){
-        System.out.printf(
-                "The %s is %d years old and earns R$%.2f",
-                name,
-                age,
-                salary);
-    }
 }

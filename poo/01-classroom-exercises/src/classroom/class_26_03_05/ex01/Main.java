@@ -8,19 +8,21 @@ public class Main {
 
         Person person = new Person();
 
+        InputManager inputManager = new InputManager();
+        OutputManager outputManager = new OutputManager();
+
+        boolean useScanner = false; // Toggle var
+
         // 1. Get name
-        System.out.println("What's your name? ");
-        person.name = scanner.nextLine();
+        inputManager.setName(person, scanner, useScanner);
 
         // 2. Get age
-        System.out.println("How old are you?");
-        person.age = Integer.parseInt(scanner.nextLine());
+        inputManager.setAge(person, scanner, useScanner);
 
         // 3. Get salary
-        System.out.println("How much do you earn?");
-        person.salary = Double.parseDouble(scanner.nextLine());
+        inputManager.setSalary(person, scanner, useScanner);
 
         // 4. Show the person info
-        person.showPersonInfo();
+        outputManager.showPersonInfo(person, scanner, useScanner);
     }
 }
