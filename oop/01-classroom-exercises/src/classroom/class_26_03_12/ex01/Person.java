@@ -1,4 +1,4 @@
-package classroom.class_26_03_12;
+package classroom.class_26_03_12.ex01;
 
 public class Person {
     String name;
