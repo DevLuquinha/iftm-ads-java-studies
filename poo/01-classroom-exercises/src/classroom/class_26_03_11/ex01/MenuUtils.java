@@ -1,5 +1,6 @@
 package classroom.class_26_03_11.ex01;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class MenuUtils {
@@ -30,5 +31,35 @@ public class MenuUtils {
         } while (option < 1 || option > 9);
 
         return option;
+    }
+
+    Person createPerson(){
+        Person person = new Person();
+
+        System.out.println("What's your name? ");
+        person.name = scanner.nextLine();
+
+        System.out.println("What is your date of the birth? in format (DD/MM/YYYY)");
+        person.birthDate = scanner.nextLine();
+
+        System.out.println("How much do you earn?");
+        person.salary = Double.parseDouble(scanner.nextLine());
+
+        return person;
+    }
+
+    Patient createPatient(){
+        Patient patient = new Patient();
+
+        System.out.println("What's your name? ");
+        patient.name = scanner.nextLine();
+
+        System.out.println("What's your weight? ");
+        patient.weight = Double.parseDouble(scanner.nextLine());
+
+        System.out.println("What's your height? ");
+        patient.height = Double.parseDouble(scanner.nextLine());
+
+        return patient;
     }
 }
