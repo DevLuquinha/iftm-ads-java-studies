@@ -1,6 +1,5 @@
-package classroom.class_26_03_11.ex01;
+package classroom.class_26_03_11;
 
-import javax.swing.*;
 import java.util.Scanner;
 
 public class MenuUtils {

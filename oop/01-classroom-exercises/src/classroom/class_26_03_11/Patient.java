@@ -1,4 +1,4 @@
-package classroom.class_26_03_11.ex01;
+package classroom.class_26_03_11;
 
 public class Patient {
     String name;
