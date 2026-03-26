@@ -3,8 +3,12 @@ package classroom.class_26_03_25;
 public class Client {
     private String name = "";
     private int age = 0;
-    private String cpf = "";
+    private String cpf = "XXX.XXX.XXX-XX";
     private double height = 0.0;
+
+    public  Client(){
+
+    }
 
     public Client(String name){
         this.name = name;
@@ -61,7 +65,23 @@ public class Client {
     }
 
     @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Client client = (Client)obj;
+
+        // A lot of conditionals
+        return client.name.equals(name) &&
+                client.height == height &&
+                client.age == age &&
+                client.cpf.equals(cpf);
+    }
+
+    @Override
     public String toString() {
-        return "The " + name + " with the CPF equals " + cpf + " has " + height + "m and is " + age + "years old";
+        return "The " + name + " with the CPF equals " + cpf + " has " + height + "m and is " + age + " years old";
     }
 }
